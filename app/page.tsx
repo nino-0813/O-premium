@@ -1,100 +1,79 @@
-import Image from "next/image";
+import Link from "next/link";
+
+export const metadata = {
+  title: "O premium",
+  description:
+    "歯科医院向けの品質にこだわった製品をご提供。歯科専用フェイスタオルで、診療所の衛生・コスト・患者体験をサポートします。",
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col bg-cream">
+      {/* 微細なパターン */}
+      <div
+        className="fixed inset-0 opacity-[0.02] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #1c1917 1px, transparent 0)`,
+          backgroundSize: "20px 20px",
+        }}
+        aria-hidden
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <main className="relative flex-1 flex flex-col items-center justify-center px-5 py-20">
+        <Link
+          href="/"
+          className="flex flex-col items-center mb-16"
+          aria-label="O premium トップ"
+        >
+          <span className="font-serif-elegant text-4xl md:text-5xl text-stone-600 border border-stone-300 rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4">
+            O
+          </span>
+          <span className="text-[11px] tracking-[0.35em] text-stone-500 uppercase">
+            O premium
+          </span>
+        </Link>
+
+        <p className="font-script text-xl md:text-2xl text-stone-400 mb-2 tracking-wide">
+          For dental care
+        </p>
+        <p className="font-serif-elegant text-stone-700 text-center max-w-sm mb-16 text-[15px] leading-relaxed">
+          歯科医院の「当たり前」を、少しだけ丁寧に。
+        </p>
+
+        <nav className="flex flex-col sm:flex-row gap-4 w-full max-w-xs">
+          <Link
+            href="/dental-towel"
+            className="inline-flex items-center justify-center rounded-xl bg-accent hover:bg-accent-hover text-white py-4 px-8 font-medium text-[15px] transition-colors duration-200"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            歯科専用フェイスタオル
+          </Link>
+          <Link
+            href="/blog/dental-towel-guide"
+            className="inline-flex items-center justify-center rounded-xl border border-stone-300 text-stone-600 hover:bg-white hover:border-stone-400 py-4 px-8 font-medium text-[15px] transition-colors duration-200"
           >
-            Read our docs
-          </a>
-        </div>
+            記事を読む
+          </Link>
+        </nav>
+
+        <p className="mt-12 text-[13px] text-stone-400">
+          <Link href="/blog/dental-towel-guide" className="hover:text-stone-600">
+            導入ガイド
+          </Link>
+          <span className="mx-2">·</span>
+          <Link href="/blog/dental-towel-hygiene" className="hover:text-stone-600">
+            衛生管理
+          </Link>
+          <span className="mx-2">·</span>
+          <Link href="/blog/dental-towel-cost" className="hover:text-stone-600">
+            コスト試算
+          </Link>
+        </p>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="relative py-8 text-center border-t border-stone-100">
+        <p className="text-[11px] text-stone-400 tracking-widest">
+          © 2025 O premium. All rights reserved.
+        </p>
       </footer>
     </div>
   );
