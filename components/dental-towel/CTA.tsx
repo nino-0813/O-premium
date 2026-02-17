@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * 強いCTA — 背景を変え、サンプル請求を強調（BtoB SaaS風）
  */
@@ -37,19 +39,18 @@ export default function CTA() {
         </p>
 
         <div id="quote-request" className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          {/* メインCTA：サンプル請求を強調 */}
-          <a
-            href="#sample-request"
+          <Link
+            href="/sample-request"
             className="inline-flex items-center justify-center w-full sm:w-auto min-w-[260px] bg-white text-accent py-5 px-10 rounded-xl font-semibold text-[15px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200"
           >
             サンプル請求はこちら
-          </a>
-          <a
-            href="#quote-request"
+          </Link>
+          <Link
+            href="/quote-request"
             className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] border-2 border-white/80 text-white hover:bg-white/15 py-5 px-8 rounded-xl font-medium text-[15px] transition-all duration-200"
           >
             見積依頼
-          </a>
+          </Link>
         </div>
 
         <p className="mt-10 text-[13px] text-white/80">

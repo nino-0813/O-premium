@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Shippori_Mincho, Playfair_Display } from "next/font/google";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import "./globals.css";
 
 const noto = Noto_Sans_JP({
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${noto.variable} ${shippori.variable} ${playfair.variable}`}>
       <body className="antialiased bg-white text-gray-800">
+        <ScrollToTop />
         {children}
       </body>
     </html>
