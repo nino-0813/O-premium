@@ -10,7 +10,7 @@ const HERO_IMAGE =
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-[70vh] flex items-center overflow-hidden"
+      className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center overflow-hidden"
       aria-label="メインビジュアル"
     >
       {/* 背景画像：診療空間・清潔感のあるイメージ */}
@@ -34,14 +34,14 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 w-full max-w-[1120px] mx-auto px-5 sm:px-8 py-20 md:py-28">
-        <p className="font-script text-lg md:text-xl text-white/80 mb-1 tracking-wide">
+      <div className="relative z-10 w-full max-w-[1120px] mx-auto px-5 sm:px-8 py-14 sm:py-20 md:py-28">
+        <p className="font-script text-base sm:text-lg md:text-xl text-white/80 mb-1 tracking-wide">
           O premium
         </p>
-        <h1 className="font-serif-elegant text-[2.25rem] md:text-[3.5rem] text-white leading-[1.15] mb-6 tracking-tight max-w-2xl">
+        <h1 className="font-serif-elegant text-[1.75rem] sm:text-[2.25rem] md:text-[3.5rem] text-white leading-[1.15] mb-4 sm:mb-6 tracking-tight max-w-2xl">
           歯科専用フェイスタオル
         </h1>
-        <p className="text-base md:text-lg text-stone-200 max-w-xl leading-[1.75] mb-8">
+        <p className="text-sm sm:text-base md:text-lg text-stone-200 max-w-xl leading-[1.75] mb-6 sm:mb-8">
           <strong className="text-white font-medium">衛生管理がしやすく、ランニングコストを抑えられる</strong>
           歯科診療所向けのフェイスタオルです。一般タオルと異なり、滅菌・洗濯サイクルに適した素材とサイズで、患者満足度と院内効率を両立します。
         </p>

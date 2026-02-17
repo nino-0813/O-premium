@@ -31,23 +31,23 @@ export default function CTA() {
         <span className="text-[11px] tracking-[0.2em] text-white/70 uppercase">
           Request
         </span>
-        <h2 id="cta-heading" className="font-serif-elegant text-2xl md:text-[2rem] font-medium text-white mt-1 mb-4">
+        <h2 id="cta-heading" className="font-serif-elegant text-xl sm:text-2xl md:text-[2rem] font-medium text-white mt-1 mb-4 px-0">
           まずは手に取って、品質を実感してください
         </h2>
-        <p className="text-white/90 text-[15px] max-w-lg mx-auto leading-relaxed mb-12">
+        <p className="text-white/90 text-[14px] sm:text-[15px] max-w-lg mx-auto leading-relaxed mb-10 sm:mb-12">
           歯科専用フェイスタオルのサンプル請求や、ご医院に合わせた見積りをご希望の方は、下記よりお問い合わせください。
         </p>
 
         <div id="quote-request" className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href="/sample-request"
-            className="inline-flex items-center justify-center w-full sm:w-auto min-w-[260px] bg-white text-accent py-5 px-10 rounded-xl font-semibold text-[15px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-200"
+            className="inline-flex items-center justify-center w-full sm:w-auto min-w-0 sm:min-w-[260px] min-h-[48px] bg-white text-accent py-4 px-8 sm:py-5 sm:px-10 rounded-xl font-semibold text-[15px] shadow-xl hover:shadow-2xl hover:-translate-y-0.5 sm:hover:-translate-y-1 transition-all duration-200 active:scale-[0.98]"
           >
             サンプル請求はこちら
           </Link>
           <Link
             href="/quote-request"
-            className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] border-2 border-white/80 text-white hover:bg-white/15 py-5 px-8 rounded-xl font-medium text-[15px] transition-all duration-200"
+            className="inline-flex items-center justify-center w-full sm:w-auto min-w-0 sm:min-w-[200px] min-h-[48px] border-2 border-white/80 text-white hover:bg-white/15 py-4 px-6 sm:py-5 sm:px-8 rounded-xl font-medium text-[15px] transition-all duration-200 active:scale-[0.98]"
           >
             見積依頼
           </Link>

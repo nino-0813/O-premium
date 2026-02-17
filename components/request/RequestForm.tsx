@@ -42,7 +42,7 @@ export function RequestForm({ type }: RequestFormProps) {
         </p>
         <Link
           href="/dental-towel"
-          className="inline-flex items-center justify-center rounded-xl bg-accent text-white py-3 px-8 font-medium text-[15px] hover:bg-accent-hover transition-colors"
+          className="inline-flex items-center justify-center rounded-xl bg-accent text-white min-h-[48px] py-3 px-8 font-medium text-[15px] hover:bg-accent-hover transition-colors touch-manipulation"
         >
           製品ページへ戻る
         </Link>
@@ -60,7 +60,7 @@ export function RequestForm({ type }: RequestFormProps) {
           id="clinic"
           name="clinic"
           type="text"
-          className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="w-full min-h-[48px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           placeholder="例：〇〇歯科クリニック"
         />
       </div>
@@ -73,7 +73,7 @@ export function RequestForm({ type }: RequestFormProps) {
           name="name"
           type="text"
           required
-          className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="w-full min-h-[48px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           placeholder="例：山田 太郎"
         />
       </div>
@@ -86,7 +86,7 @@ export function RequestForm({ type }: RequestFormProps) {
           name="email"
           type="email"
           required
-          className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="w-full min-h-[48px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           placeholder="例：contact@example.com"
         />
       </div>
@@ -98,7 +98,7 @@ export function RequestForm({ type }: RequestFormProps) {
           id="tel"
           name="tel"
           type="tel"
-          className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="w-full min-h-[48px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           placeholder="例：03-1234-5678"
         />
       </div>
@@ -111,7 +111,7 @@ export function RequestForm({ type }: RequestFormProps) {
             id="quantity"
             name="quantity"
             type="text"
-            className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            className="w-full min-h-[48px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
             placeholder="例：50枚／月、100枚から検討など"
           />
         </div>
@@ -124,14 +124,14 @@ export function RequestForm({ type }: RequestFormProps) {
           id="message"
           name="message"
           rows={4}
-          className="w-full rounded-lg border border-stone-200 bg-white py-3 px-4 text-[15px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent resize-y"
+          className="w-full min-h-[120px] rounded-lg border border-stone-200 bg-white py-3 px-4 text-[16px] text-stone-800 placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent resize-y"
           placeholder={type === "sample" ? "サンプルの送付先やご希望があればご記入ください。" : "希望納期・ロット・仕様のご希望などがあればご記入ください。"}
         />
       </div>
       <div className="pt-2">
         <button
           type="submit"
-          className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center rounded-xl bg-accent text-white py-4 px-10 font-semibold text-[15px] hover:bg-accent-hover transition-colors"
+          className="w-full sm:w-auto min-w-[200px] min-h-[48px] inline-flex items-center justify-center rounded-xl bg-accent text-white py-4 px-10 font-semibold text-[15px] hover:bg-accent-hover transition-colors active:scale-[0.98]"
         >
           {labels.submit}
         </button>

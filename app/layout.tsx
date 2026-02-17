@@ -32,6 +32,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"),
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${noto.variable} ${shippori.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-white text-gray-800">
+      <body className="antialiased bg-white text-gray-800 overflow-x-hidden min-w-0">
         <ScrollToTop />
         {children}
       </body>

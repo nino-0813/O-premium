@@ -17,7 +17,7 @@ export default function LpHeader() {
         </Link>
         <Link
           href="/"
-          className="text-[13px] text-stone-500 hover:text-stone-800 border-b border-stone-300 pb-0.5 transition-colors duration-200"
+          className="text-[13px] text-stone-500 hover:text-stone-800 border-b border-stone-300 pb-0.5 transition-colors duration-200 min-h-[44px] flex items-center touch-manipulation"
         >
           トップへ戻る
         </Link>

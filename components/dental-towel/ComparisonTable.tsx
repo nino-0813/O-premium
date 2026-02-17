@@ -47,8 +47,8 @@ export default function ComparisonTable() {
         <p className="text-stone-500 text-[15px] leading-relaxed mb-10 max-w-2xl">
           歯科専用フェイスタオルは、診療所での利用を前提に設計されています。一般のフェイスタオルとの主な違いは以下のとおりです。
         </p>
-        <div className="overflow-hidden rounded-2xl border border-stone-100 bg-white shadow-card">
-          <table className="min-w-full text-left">
+        <div className="overflow-x-auto overflow-y-hidden rounded-2xl border border-stone-100 bg-white shadow-card -mx-1 px-1 sm:mx-0 sm:px-0">
+          <table className="min-w-[640px] sm:min-w-full text-left">
             <thead>
               <tr className="border-b border-stone-100 bg-stone-50/80">
                 <th scope="col" className="py-4 px-6 text-[12px] font-medium tracking-wider text-stone-500 uppercase w-36">

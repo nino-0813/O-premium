@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { MobileNav } from "@/components/MobileNav";
 
 export const metadata = {
   title: "O premium｜歯科専用プレミアムタオル",
@@ -27,23 +28,7 @@ export default function Home() {
               O premium
             </span>
           </Link>
-          <nav className="flex items-center gap-6" aria-label="メインナビゲーション">
-            <a href="#features" className="text-[13px] text-stone-500 hover:text-stone-800 hidden sm:inline">
-              特徴
-            </a>
-            <a href="#voices" className="text-[13px] text-stone-500 hover:text-stone-800 hidden sm:inline">
-              現場の声
-            </a>
-            <a href="#contact" className="text-[13px] text-stone-500 hover:text-stone-800 hidden sm:inline">
-              お問い合わせ
-            </a>
-            <Link
-              href="/dental-towel"
-              className="text-[13px] font-medium text-stone-700 border-b border-stone-400 pb-0.5 hover:text-stone-900"
-            >
-              製品詳細
-            </Link>
-          </nav>
+          <MobileNav />
         </div>
       </header>
 
@@ -92,7 +77,7 @@ export default function Home() {
                 </dl>
                 <Link
                   href="/dental-towel"
-                  className="inline-flex items-center justify-center rounded-lg bg-stone-900 text-white py-3.5 px-8 font-medium text-[15px] hover:bg-stone-800 transition-colors"
+                  className="inline-flex items-center justify-center rounded-lg bg-stone-900 text-white min-h-[48px] py-3.5 px-8 font-medium text-[15px] hover:bg-stone-800 transition-colors touch-manipulation"
                 >
                   製品詳細・お問い合わせ
                 </Link>
@@ -309,13 +294,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/dental-towel"
-                className="inline-flex items-center justify-center rounded-lg bg-white text-stone-900 py-4 px-10 font-medium text-[15px] hover:bg-stone-100 transition-colors"
+                className="inline-flex items-center justify-center rounded-lg bg-white text-stone-900 min-h-[48px] py-4 px-10 font-medium text-[15px] hover:bg-stone-100 transition-colors touch-manipulation"
               >
                 製品詳細・お問い合わせ
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-stone-500 text-stone-200 py-4 px-8 font-medium text-[15px] hover:bg-stone-800 transition-colors"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-stone-500 text-stone-200 min-h-[48px] py-4 px-8 font-medium text-[15px] hover:bg-stone-800 transition-colors touch-manipulation"
               >
                 記事を読む
               </Link>
@@ -327,14 +312,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-stone-100 bg-stone-50/30">
         <div className="max-w-[1120px] mx-auto px-5 sm:px-8">
-          <nav className="flex flex-wrap items-center justify-center gap-6 mb-8" aria-label="フッターナビゲーション">
-            <Link href="/dental-towel" className="text-[13px] text-stone-600 hover:text-stone-800">
+          <nav className="flex flex-wrap items-center justify-center gap-6 mb-8 py-2" aria-label="フッターナビゲーション">
+            <Link href="/dental-towel" className="text-[14px] text-stone-600 hover:text-stone-800 min-h-[44px] flex items-center justify-center py-2 touch-manipulation">
               製品詳細
             </Link>
-            <Link href="/blog" className="text-[13px] text-stone-600 hover:text-stone-800">
+            <Link href="/blog" className="text-[14px] text-stone-600 hover:text-stone-800 min-h-[44px] flex items-center justify-center py-2 touch-manipulation">
               ブログ
             </Link>
-            <a href="#contact" className="text-[13px] text-stone-600 hover:text-stone-800">
+            <a href="#contact" className="text-[14px] text-stone-600 hover:text-stone-800 min-h-[44px] flex items-center justify-center py-2 touch-manipulation">
               お問い合わせ
             </a>
           </nav>

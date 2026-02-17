@@ -11,6 +11,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-noto), "Noto Sans JP", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* スマホのタッチ操作を快適に */
+a,
+button {
+  touch-action: manipulation;
 }
 
 .font-serif-elegant {
