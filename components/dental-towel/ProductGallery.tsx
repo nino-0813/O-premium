@@ -4,11 +4,11 @@ import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 
 const PRODUCT_IMAGES: { src: string; alt: string }[] = [
-  { src: "/images/benefits-visual.png", alt: "O premium タオルと歯科診療室" },
-  { src: "/images/gallery-2.png", alt: "O premium タオルを積んだ様子" },
-  { src: "/images/gallery-3.png", alt: "O premium 歯科ユニット上のタオル" },
-  { src: "/images/gallery-4.png", alt: "O premium タオルを手に持つ様子" },
-  { src: "/images/gallery-5.png", alt: "O premium タオルとカウンター" },
+  { src: "/images/benefits.webp", alt: "O premium タオルと歯科診療室" },
+  { src: "/images/gallery-1.webp", alt: "O premium タオルを積んだ様子" },
+  { src: "/images/gallery-2.webp", alt: "O premium 歯科ユニット上のタオル" },
+  { src: "/images/gallery-3.webp", alt: "O premium タオルを手に持つ様子" },
+  { src: "/images/gallery-4.webp", alt: "O premium タオルとカウンター" },
 ];
 
 type ProductGalleryProps = {

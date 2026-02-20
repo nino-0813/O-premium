@@ -8,21 +8,21 @@ const features = [
     title: "優れた吸水・速乾性",
     description:
       "超甘撚り糸を使用し、一般タオルの約1.5倍の吸水力を実現。診療後の拭き取りに最適な、素早く水分を吸い取る設計です。",
-    iconSrc: "/images/feature-icon-absorb.png",
+    iconSrc: "/images/icon-absorb.webp",
     iconAlt: "吸水・速乾性のアイコン",
   },
   {
     title: "高い耐久性",
     description:
       "高温洗濯（60°C以上）・業務用乾燥機に対応。パイピング縫製でほつれを防ぎ、50回以上の洗濯サイクルでも品質を維持します。",
-    iconSrc: "/images/feature-icon-wash.png",
+    iconSrc: "/images/icon-wash.webp",
     iconAlt: "洗濯・乾燥耐性のアイコン",
   },
   {
     title: "極上の肌触り",
     description:
       "超甘撚り糸で織りあげた、ふわふわで柔らかい触感。患者様の顔に直接触れるタオルだからこそ、肌触りの良さにこだわりました。",
-    iconSrc: "/images/feature-icon-feel.png",
+    iconSrc: "/images/icon-feel.webp",
     iconAlt: "肌触りのアイコン",
   },
 ];

@@ -78,19 +78,15 @@ export default function Hero() {
             <div className="lg:max-w-lg mx-auto px-2 sm:px-0">
               <div className="relative aspect-[4/5] w-full max-w-[340px] sm:max-w-none mx-auto rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] lg:shadow-soft border border-border bg-secondary/30 lg:bg-transparent">
                 <Image
-                  src="/images/hero-towel-stack.png"
+                  src="/images/hero.webp"
                   alt="O premium 歯科専用プレミアムフェイスタオル"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   priority
                   sizes="(max-width: 640px) 340px, (max-width: 1024px) 100vw, 50vw"
                 />
                 {/* スマホのみ: 下方向のグラデーションでコンテンツへ自然につなぐ */}
                 <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 bg-gradient-to-t from-card/90 via-card/40 to-transparent pointer-events-none lg:hidden" aria-hidden />
-                {/* スマホのみ: 控えめなキャプション */}
-                <p className="absolute bottom-3 left-4 right-4 text-center text-[11px] tracking-[0.2em] text-foreground/70 font-medium uppercase lg:hidden">
-                  O premium
-                </p>
               </div>
             </div>
           </div>

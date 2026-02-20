@@ -25,7 +25,7 @@ export default function LpHeader() {
         >
           <span className="relative w-9 h-9 shrink-0 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
             <Image
-              src="/images/logo-o.png"
+              src="/images/logo.webp"
               alt="O premium"
               width={36}
               height={36}
