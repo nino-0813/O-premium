@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafbf9;
+  --foreground: #1a2e1a;
+  --card: #ffffff;
+  --card-foreground: #1a2e1a;
+  --primary: #4a6741;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f4ee;
+  --secondary-foreground: #2d4a2d;
+  --muted: #e8ede6;
+  --muted-foreground: #5c7a5c;
+  --accent: #4a6741;
+  --accent-light: #dce5d9;
+  --border: #d4ddd1;
+  --ring: #4a6741;
+  --radius: 0.75rem;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-noto), "Noto Sans JP", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* スマホのタッチ操作を快適に */
+a,
+button {
+  touch-action: manipulation;
+}
+
+.font-serif-elegant {
+  font-family: var(--font-shippori), "Shippori Mincho", serif;
+}
+
+.font-script {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-style: italic;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
