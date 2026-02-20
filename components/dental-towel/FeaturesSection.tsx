@@ -36,7 +36,7 @@ export default function FeaturesSection() {
     >
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
         <div className="text-center mb-16">
-          <span className="text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
+          <span className="font-script text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
             Features
           </span>
           <h2 id="features-heading" className="font-serif-elegant text-2xl md:text-3xl font-medium text-foreground mt-2 text-balance">
@@ -47,13 +47,13 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-6 lg:gap-8 max-w-2xl md:max-w-none mx-auto md:mx-0">
           {features.map((feature, i) => (
             <div
               key={i}
-              className="rounded-xl sm:rounded-2xl border border-border bg-card p-4 sm:p-6 lg:p-8 shadow-card hover:shadow-soft hover:border-accent-light transition-all duration-300 min-w-0"
+              className="rounded-xl sm:rounded-2xl border border-border bg-card p-5 sm:p-6 lg:p-8 shadow-card hover:shadow-soft hover:border-accent-light transition-all duration-300 min-w-0 flex flex-col md:block"
             >
-              <div className="relative h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 shrink-0 rounded-lg sm:rounded-xl overflow-hidden bg-accent-light mb-3 sm:mb-4 lg:mb-6">
+              <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 rounded-xl overflow-hidden bg-accent-light mb-4 lg:mb-6">
                 <Image
                   src={feature.iconSrc}
                   alt={feature.iconAlt}

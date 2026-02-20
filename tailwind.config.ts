@@ -30,8 +30,9 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        "serif-elegant": ["var(--font-shippori)", "Shippori Mincho", "serif"],
-        script: ["var(--font-playfair)", "Playfair Display", "serif"],
+        sans: ["var(--font-sans)", "Noto Sans JP", "sans-serif"],
+        "serif-elegant": ["var(--font-serif)", "Noto Serif JP", "serif"],
+        script: ["var(--font-script)", "Playfair Display", "serif"],
       },
       boxShadow: {
         soft: "0 2px 15px -3px rgb(0 0 0 / 0.04), 0 4px 6px -4px rgb(0 0 0 / 0.02)",

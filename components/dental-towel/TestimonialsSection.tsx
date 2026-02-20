@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
 
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8 relative">
         <div className="text-center mb-14 md:mb-20">
-          <span className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
+          <span className="font-script text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
             Voices
           </span>
           <h2 id="testimonials-heading" className="font-serif-elegant text-2xl md:text-[2rem] lg:text-[2.25rem] font-medium text-foreground mt-2 text-balance tracking-tight">

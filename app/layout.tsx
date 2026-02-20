@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Shippori_Mincho, Playfair_Display } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP, Playfair_Display } from "next/font/google";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import "./globals.css";
 
-const noto = Noto_Sans_JP({
+const notoSans = Noto_Sans_JP({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-noto",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const shippori = Shippori_Mincho({
+const notoSerif = Noto_Serif_JP({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-shippori",
+  variable: "--font-serif",
   display: "swap",
 });
 
 const playfair = Playfair_Display({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -44,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${noto.variable} ${shippori.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-background text-foreground overflow-x-hidden min-w-0">
+    <html lang="ja" className={`${notoSans.variable} ${notoSerif.variable} ${playfair.variable}`}>
+      <body className="antialiased bg-background text-foreground overflow-x-hidden min-w-0 font-sans">
         <ScrollToTop />
         {children}
       </body>

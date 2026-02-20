@@ -3,9 +3,9 @@ import {
   buildOrganizationSchema,
   buildProductSchema,
   buildFAQSchema,
-  type FAQItem,
   SITE_URL,
 } from "@/lib/schemas";
+import { FAQ_DATA } from "@/lib/faq-data";
 import JsonLd from "@/components/JsonLd";
 import LpHeader from "@/components/dental-towel/LpHeader";
 import LpFooter from "@/components/dental-towel/LpFooter";
@@ -22,34 +22,6 @@ import AnimateIn from "@/components/AnimateIn";
 const LP_TITLE = "歯科専用フェイスタオル｜O premium｜歯科医院向け高級タオル";
 const LP_DESCRIPTION =
   "現場の歯科医師が考えた歯科専用フェイスタオル。吸水性・耐久性・肌触りにこだわり、患者満足度と医院ブランド力を高めます。無料サンプル請求・見積依頼受付中。";
-
-const FAQ_DATA: FAQItem[] = [
-  {
-    question: "歯科専用フェイスタオルとは何ですか？",
-    answer:
-      "歯科診療所で患者の顔面・首まわりを拭くために用いる、洗濯・乾燥を繰り返して再利用する布製のタオルです。使い捨てのペーパータオルとは区別され、高温洗濯や乾燥機に耐える素材・サイズで設計されています。",
-  },
-  {
-    question: "一般のフェイスタオルとどう違いますか？",
-    answer:
-      "歯科専用は、診療所での利用を前提にした素材・サイズ・耐久性で設計されています。高温洗濯・乾燥に対応し、患者ごとの取り替えと洗濯サイクルを想定しているため、衛生管理や在庫管理がしやすく、ランニングコストの削減にもつながります。",
-  },
-  {
-    question: "コストはどの程度かかりますか？",
-    answer:
-      "初期費用は一般タオルより高めになる場合がありますが、1枚を50回以上使用することを想定すると、1回あたりのコストは数十円以下になる試算があります。使い捨てタオルと比較すると、年間で大きな削減効果が期待できます。医院の規模・使用枚数に応じた見積りをご用意しています。",
-  },
-  {
-    question: "洗濯・滅菌はどうすればよいですか？",
-    answer:
-      "高温（60°C以上）での洗濯と、乾燥機による乾燥を推奨しています。漂白剤の使用も可能な製品を選ぶと、衛生面でより安心です。院内の既存の洗濯ルートに組み込んでいただく形で運用できます。",
-  },
-  {
-    question: "サンプルや見積りは依頼できますか？",
-    answer:
-      "はい。無料サンプル・見積依頼を承っています。ページ内の「サンプル請求」「見積依頼」からお申し込みください。通常、2〜3営業日以内にご連絡いたします。",
-  },
-];
 
 export async function generateMetadata(): Promise<Metadata> {
   const url = SITE_URL;

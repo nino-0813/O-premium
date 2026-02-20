@@ -38,7 +38,7 @@ export default function ComparisonTable() {
     >
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
         <div className="text-center mb-16">
-          <span className="text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
+          <span className="font-script text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
             Comparison
           </span>
           <h2 id="comparison-heading" className="font-serif-elegant text-2xl md:text-3xl font-medium text-foreground mt-2 text-balance">
@@ -57,7 +57,7 @@ export default function ComparisonTable() {
                 <th scope="col" className="py-5 px-6 text-[12px] font-medium tracking-wider text-muted-foreground uppercase w-40">
                   比較項目
                 </th>
-                <th scope="col" className="py-5 px-6 text-[13px] font-semibold text-primary">
+                <th scope="col" className="py-5 px-6 text-[13px] font-semibold text-primary font-script">
                   O premium
                 </th>
                 <th scope="col" className="py-5 px-6 text-[13px] font-semibold text-muted-foreground">
@@ -102,7 +102,7 @@ export default function ComparisonTable() {
               </p>
               <div className="space-y-2 sm:space-y-3">
                 <div className="rounded-lg bg-accent-light border border-accent-light p-2 sm:p-3">
-                  <p className="text-[10px] sm:text-[11px] font-medium text-primary mb-0.5 sm:mb-1">O premium</p>
+                  <p className="font-script text-[10px] sm:text-[11px] font-medium text-primary mb-0.5 sm:mb-1">O premium</p>
                   <p className="text-[12px] sm:text-[14px] text-foreground leading-relaxed">{row.ours}</p>
                 </div>
                 <div className="rounded-lg bg-secondary p-2 sm:p-3">

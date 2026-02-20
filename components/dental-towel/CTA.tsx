@@ -21,7 +21,7 @@ export default function CTA() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1120px] px-5 sm:px-8 text-center">
-        <span className="text-[11px] tracking-[0.2em] text-white/70 uppercase">
+        <span className="font-script text-[11px] tracking-[0.2em] text-white/70 uppercase">
           Sample Request
         </span>
         <h2 id="cta-heading" className="font-serif-elegant text-xl sm:text-2xl md:text-[2rem] font-medium text-white mt-2 mb-4 text-balance">

@@ -27,8 +27,11 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-noto), "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), "Noto Sans JP", sans-serif;
+  font-feature-settings: "palt" 1;
   -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
 }
 
 /* スマホのタッチ操作を快適に */
@@ -38,12 +41,15 @@ button {
 }
 
 .font-serif-elegant {
-  font-family: var(--font-shippori), "Shippori Mincho", serif;
+  font-family: var(--font-serif), "Noto Serif JP", serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.02em;
 }
 
 .font-script {
-  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-family: var(--font-script), "Playfair Display", serif;
   font-style: italic;
+  letter-spacing: 0.04em;
 }
 
 @layer utilities {

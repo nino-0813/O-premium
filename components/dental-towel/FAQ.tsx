@@ -58,7 +58,7 @@ export default function FAQ({ items }: FAQProps) {
     >
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
         <div className="text-center mb-16">
-          <span className="text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
+          <span className="font-script text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
             FAQ
           </span>
           <h2 id="faq-heading" className="font-serif-elegant text-2xl md:text-3xl font-medium text-foreground mt-2 text-balance">

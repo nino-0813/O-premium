@@ -70,7 +70,7 @@ export default function BenefitsSection() {
 
           {/* Content */}
           <div>
-            <span className="text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
+            <span className="font-script text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
               Benefits
             </span>
             <h2 id="benefits-heading" className="font-serif-elegant text-2xl md:text-3xl font-medium text-foreground mt-2 mb-4 text-balance">
