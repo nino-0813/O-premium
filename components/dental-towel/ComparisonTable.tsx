@@ -1,63 +1,66 @@
 /**
- * 一般タオルとの比較表 — カード風・読みやすいテーブル
+ * 他社との違い — 表形式の比較セクション
  */
-export default function ComparisonTable() {
-  const rows = [
-    {
-      item: "素材・織り",
-      dental: "歯科専用：綿または綿混、診療向け織り（吸水・耐久）",
-      general: "一般：デザイン重視が多く、診療での繰り返し洗濯に不向きな場合あり",
-    },
-    {
-      item: "サイズ",
-      dental: "歯科専用：顔面・首まわりに合わせた規格（例：約35×80cm）",
-      general: "一般：バラつきが大きく、在庫・洗濯管理が煩雑",
-    },
-    {
-      item: "洗濯・乾燥",
-      dental: "歯科専用：高温洗濯・乾燥機想定、色落ち・縮みを抑制",
-      general: "一般：家庭用洗濯想定が多く、業務用だと劣化が早いことがある",
-    },
-    {
-      item: "コスト（1枚あたり目安）",
-      dental: "歯科専用：初期単価は高めでも、50回以上使用で1回あたり数十円以下になる試算",
-      general: "一般：安価なものは耐久性が低く、買い替え頻度で総コストが増える場合あり",
-    },
-    {
-      item: "衛生・滅菌",
-      dental: "歯科専用：滅菌パック・洗濯ルートを想定した管理がしやすい設計",
-      general: "一般：用途が想定されていないため、院内ルールに合わせた運用が必要",
-    },
-  ];
+const rows = [
+  {
+    item: "素材・織り",
+    ours: "歯科専用設計。超甘撚り綿100%、吸水・耐久に最適化",
+    others: "デザイン重視が多く、業務用洗濯に不向きな場合あり",
+  },
+  {
+    item: "サイズ",
+    ours: "約35x34cm。診療に最適化された顔面・首まわり規格",
+    others: "バラつきが大きく、在庫・洗濯管理が煩雑になりがち",
+  },
+  {
+    item: "洗濯・乾燥耐性",
+    ours: "60°C以上の高温洗濯・乾燥機対応。色落ち・縮みを抑制",
+    others: "家庭用洗濯想定が多く、業務使用で劣化が早い",
+  },
+  {
+    item: "ランニングコスト",
+    ours: "50回以上使用で1回あたり数十円以下の試算",
+    others: "安価でも耐久性が低く、買い替えで総コスト増",
+  },
+  {
+    item: "衛生管理",
+    ours: "滅菌パック・洗濯ルート想定の設計で管理しやすい",
+    others: "医療用途を想定していないため、運用ルール整備が必要",
+  },
+];
 
+export default function ComparisonTable() {
   return (
     <section
-      className="py-20 md:py-24 bg-white"
+      id="comparison"
+      className="py-20 md:py-28 bg-card scroll-mt-20"
       aria-labelledby="comparison-heading"
     >
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
-        <div className="mb-12">
-          <span className="text-[11px] tracking-[0.2em] text-stone-400 uppercase">
+        <div className="text-center mb-16">
+          <span className="text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
             Comparison
           </span>
-          <h2 id="comparison-heading" className="font-serif-elegant text-2xl md:text-[1.65rem] font-medium text-stone-800 mt-1">
-            一般タオルとの比較
+          <h2 id="comparison-heading" className="font-serif-elegant text-2xl md:text-3xl font-medium text-foreground mt-2 text-balance">
+            一般タオルとの違い
           </h2>
+          <p className="text-muted-foreground text-[15px] mt-4 max-w-xl mx-auto leading-relaxed">
+            歯科専用だからこそ実現できる、現場に最適化された品質です。
+          </p>
         </div>
-        <p className="text-stone-500 text-[15px] leading-relaxed mb-10 max-w-2xl">
-          歯科専用フェイスタオルは、診療所での利用を前提に設計されています。一般のフェイスタオルとの主な違いは以下のとおりです。
-        </p>
-        <div className="overflow-x-auto overflow-y-hidden rounded-2xl border border-stone-100 bg-white shadow-card -mx-1 px-1 sm:mx-0 sm:px-0">
-          <table className="min-w-[640px] sm:min-w-full text-left">
+
+        {/* Desktop table */}
+        <div className="hidden md:block overflow-hidden rounded-2xl border border-border bg-card shadow-card">
+          <table className="w-full text-left">
             <thead>
-              <tr className="border-b border-stone-100 bg-stone-50/80">
-                <th scope="col" className="py-4 px-6 text-[12px] font-medium tracking-wider text-stone-500 uppercase w-36">
+              <tr className="border-b border-border bg-secondary">
+                <th scope="col" className="py-5 px-6 text-[12px] font-medium tracking-wider text-muted-foreground uppercase w-40">
                   比較項目
                 </th>
-                <th scope="col" className="py-4 px-6 text-[13px] font-semibold text-stone-800">
-                  歯科専用フェイスタオル
+                <th scope="col" className="py-5 px-6 text-[13px] font-semibold text-primary">
+                  O premium
                 </th>
-                <th scope="col" className="py-4 px-6 text-[13px] font-semibold text-stone-800">
+                <th scope="col" className="py-5 px-6 text-[13px] font-semibold text-muted-foreground">
                   一般のフェイスタオル
                 </th>
               </tr>
@@ -66,21 +69,49 @@ export default function ComparisonTable() {
               {rows.map((row, i) => (
                 <tr
                   key={i}
-                  className="border-b border-stone-50 last:border-0 transition-colors hover:bg-stone-50/50"
+                  className="border-b border-border/50 last:border-0 transition-colors hover:bg-secondary/50"
                 >
-                  <td className="py-4 px-6 text-[13px] font-medium text-stone-700 whitespace-nowrap">
+                  <td className="py-5 px-6 text-[13px] font-medium text-foreground whitespace-nowrap">
                     {row.item}
                   </td>
-                  <td className="py-4 px-6 text-[14px] text-stone-600 leading-relaxed">
-                    {row.dental}
+                  <td className="py-5 px-6 text-[14px] text-foreground leading-relaxed">
+                    <span className="flex items-start gap-2">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                          <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      {row.ours}
+                    </span>
                   </td>
-                  <td className="py-4 px-6 text-[14px] text-stone-500 leading-relaxed">
-                    {row.general}
+                  <td className="py-5 px-6 text-[14px] text-muted-foreground leading-relaxed">
+                    {row.others}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile cards */}
+        <div className="md:hidden space-y-4">
+          {rows.map((row, i) => (
+            <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-card">
+              <p className="text-[12px] font-medium tracking-wider text-muted-foreground uppercase mb-3">
+                {row.item}
+              </p>
+              <div className="space-y-3">
+                <div className="rounded-lg bg-primary/5 border border-primary/10 p-3">
+                  <p className="text-[11px] font-medium text-primary mb-1">O premium</p>
+                  <p className="text-[14px] text-foreground leading-relaxed">{row.ours}</p>
+                </div>
+                <div className="rounded-lg bg-secondary p-3">
+                  <p className="text-[11px] font-medium text-muted-foreground mb-1">一般タオル</p>
+                  <p className="text-[14px] text-muted-foreground leading-relaxed">{row.others}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

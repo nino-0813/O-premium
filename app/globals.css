@@ -3,8 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #1c1917;
+  --background: #fafbf9;
+  --foreground: #1a2e1a;
+  --card: #ffffff;
+  --card-foreground: #1a2e1a;
+  --primary: #4a6741;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f4ee;
+  --secondary-foreground: #2d4a2d;
+  --muted: #e8ede6;
+  --muted-foreground: #5c7a5c;
+  --accent: #4a6741;
+  --accent-light: #dce5d9;
+  --border: #d4ddd1;
+  --ring: #4a6741;
+  --radius: 0.75rem;
 }
 
 body {

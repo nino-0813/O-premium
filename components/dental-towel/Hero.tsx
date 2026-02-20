@@ -1,67 +1,86 @@
 /**
- * ファーストビュー — 診療チェア風背景画像 + オーバーレイで文字を読みやすく
+ * ヒーロー — 現場の歯科医師が考えたという信頼訴求
+ * 大きなビジュアル + 余白多め + 上品なタイポグラフィ
  */
 import Image from "next/image";
-
-// 診療空間・清潔感のあるイメージ（差し替え可）
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center overflow-hidden"
+      className="relative w-full overflow-hidden bg-card"
       aria-label="メインビジュアル"
     >
-      {/* 背景画像：診療空間・清潔感のあるイメージ */}
-      <div className="absolute inset-0">
-        <Image
-          src={HERO_IMAGE}
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
-      </div>
-      {/* オーバーレイ：文字を読みやすく・BtoBらしい落ち着いたトーン */}
-      <div
-        className="absolute inset-0 bg-stone-900/65"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-stone-900/80 via-stone-900/50 to-transparent"
-        aria-hidden
-      />
+      <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 sm:py-20 lg:py-28">
+          {/* Text content */}
+          <div className="order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 mb-8">
+              <span className="w-2 h-2 rounded-full bg-primary" aria-hidden />
+              <span className="text-[13px] text-secondary-foreground">現場の歯科医師が考えた</span>
+            </div>
 
-      <div className="relative z-10 w-full max-w-[1120px] mx-auto px-5 sm:px-8 py-14 sm:py-20 md:py-28">
-        <p className="font-script text-base sm:text-lg md:text-xl text-white/80 mb-1 tracking-wide">
-          O premium
-        </p>
-        <h1 className="font-serif-elegant text-[1.75rem] sm:text-[2.25rem] md:text-[3.5rem] text-white leading-[1.15] mb-4 sm:mb-6 tracking-tight max-w-2xl">
-          歯科専用フェイスタオル
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg text-stone-200 max-w-xl leading-[1.75] mb-6 sm:mb-8">
-          <strong className="text-white font-medium">衛生管理がしやすく、ランニングコストを抑えられる</strong>
-          歯科診療所向けのフェイスタオルです。一般タオルと異なり、滅菌・洗濯サイクルに適した素材とサイズで、患者満足度と院内効率を両立します。
-        </p>
-        <span className="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-4 py-2 text-[13px] font-medium tracking-[0.08em] text-white">
-          歯科医院向け専用
-        </span>
-        <ul className="mt-12 space-y-4">
-          {[
-            "吸水・速乾性に優れ、診療後の拭き取りに最適",
-            "高温洗濯・乾燥に対応し、衛生管理が容易",
-            "使い捨てタオルと比較してコスト削減効果が大きい",
-          ].map((text, i) => (
-            <li key={i} className="flex items-center gap-3 text-stone-200">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-white text-xs font-semibold">
-                ✓
-              </span>
-              <span>{text}</span>
-            </li>
-          ))}
-        </ul>
+            <p className="font-script text-base sm:text-lg text-muted-foreground mb-2 tracking-wide">
+              O premium
+            </p>
+            <h1 className="font-serif-elegant text-3xl sm:text-4xl lg:text-5xl text-foreground leading-[1.15] mb-6 tracking-tight text-balance">
+              歯科医院のための
+              <br />
+              高級フェイスタオル
+            </h1>
+            <p className="text-[15px] sm:text-base text-muted-foreground leading-relaxed mb-8 max-w-lg">
+              現場の歯科医師・衛生士が素材から設計した、歯科専用プレミアムフェイスタオル。
+              <strong className="text-foreground font-medium">吸水性・耐久性・肌触り</strong>
+              のすべてにこだわり、患者満足度と医院のブランド力を高めます。
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                href="/sample-request"
+                className="inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground min-h-[48px] py-3.5 px-8 font-medium text-[15px] shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]"
+              >
+                無料サンプルを請求する
+              </Link>
+              <a
+                href="#features"
+                className="inline-flex items-center justify-center rounded-full border-2 border-border text-foreground min-h-[48px] py-3.5 px-8 font-medium text-[15px] hover:bg-secondary transition-colors duration-200"
+              >
+                詳しく見る
+              </a>
+            </div>
+
+            <ul className="flex flex-col gap-3">
+              {[
+                "吸水・速乾性に優れ、診療後の拭き取りに最適",
+                "高温洗濯・乾燥に対応し、衛生管理が容易",
+                "使い捨てと比較してコスト削減効果が大きい",
+              ].map((text, i) => (
+                <li key={i} className="flex items-center gap-3 text-[14px] text-muted-foreground">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                      <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Hero Image */}
+          <div className="order-1 lg:order-2">
+            <div className="relative aspect-[4/5] max-w-lg mx-auto rounded-2xl overflow-hidden shadow-soft border border-border/50">
+              <Image
+                src="/images/hero-towel.jpg"
+                alt="O premium 歯科専用プレミアムフェイスタオル"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

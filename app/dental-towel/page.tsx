@@ -10,18 +10,16 @@ import JsonLd from "@/components/JsonLd";
 import LpHeader from "@/components/dental-towel/LpHeader";
 import LpFooter from "@/components/dental-towel/LpFooter";
 import Hero from "@/components/dental-towel/Hero";
+import FeaturesSection from "@/components/dental-towel/FeaturesSection";
 import ComparisonTable from "@/components/dental-towel/ComparisonTable";
-import CostComparisonCards from "@/components/dental-towel/CostComparisonCards";
+import TestimonialsSection from "@/components/dental-towel/TestimonialsSection";
 import BenefitsSection from "@/components/dental-towel/BenefitsSection";
-import BeforeAfterSection from "@/components/dental-towel/BeforeAfterSection";
-import PatientExperienceSection from "@/components/dental-towel/PatientExperienceSection";
-import ScientificEvidence from "@/components/dental-towel/ScientificEvidence";
 import FAQ from "@/components/dental-towel/FAQ";
 import CTA from "@/components/dental-towel/CTA";
 
-const LP_TITLE = "歯科専用フェイスタオル｜衛生・コスト・環境に配慮した歯科医院向けタオル";
+const LP_TITLE = "歯科専用フェイスタオル｜O premium｜歯科医院向け高級タオル";
 const LP_DESCRIPTION =
-  "歯科医院向けの専用フェイスタオル。一般タオルとの違い、導入メリット、科学的根拠を解説。サンプル請求・見積依頼受付中。";
+  "現場の歯科医師が考えた歯科専用フェイスタオル。吸水性・耐久性・肌触りにこだわり、患者満足度と医院ブランド力を高めます。無料サンプル請求・見積依頼受付中。";
 
 const FAQ_DATA: FAQItem[] = [
   {
@@ -47,7 +45,7 @@ const FAQ_DATA: FAQItem[] = [
   {
     question: "サンプルや見積りは依頼できますか？",
     answer:
-      "はい。サンプル請求・見積依頼を承っています。ページ下部の「サンプル請求」「見積依頼」からお申し込みください。通常、2〜3営業日以内にご連絡いたします。",
+      "はい。無料サンプル・見積依頼を承っています。ページ内の「サンプル請求」「見積依頼」からお申し込みください。通常、2〜3営業日以内にご連絡いたします。",
   },
 ];
 
@@ -77,7 +75,7 @@ export default function DentalTowelPage() {
   const pageUrl = `${SITE_URL}/dental-towel`;
   const organizationSchema = buildOrganizationSchema();
   const productSchema = buildProductSchema({
-    name: "歯科専用フェイスタオル",
+    name: "O premium 歯科専用フェイスタオル",
     description: LP_DESCRIPTION,
     pageUrl,
   });
@@ -92,14 +90,12 @@ export default function DentalTowelPage() {
         <LpHeader />
         <main id="main" className="flex-1">
           <Hero />
+          <FeaturesSection />
           <ComparisonTable />
-          <CostComparisonCards />
+          <TestimonialsSection />
           <BenefitsSection />
-          <BeforeAfterSection />
-          <PatientExperienceSection />
-          <ScientificEvidence />
-          <FAQ items={FAQ_DATA} />
           <CTA />
+          <FAQ items={FAQ_DATA} />
         </main>
         <LpFooter />
       </div>

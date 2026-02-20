@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${noto.variable} ${shippori.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-white text-gray-800 overflow-x-hidden min-w-0">
+      <body className="antialiased bg-background text-foreground overflow-x-hidden min-w-0">
         <ScrollToTop />
         {children}
       </body>
