@@ -60,8 +60,8 @@ export default function BenefitsSection() {
           {/* Image */}
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft border border-border">
             <Image
-              src="/images/dental-clinic.jpg"
-              alt="清潔感のある歯科医院の診療室"
+              src="/images/benefits-visual.png"
+              alt="O premium タオルと歯科診療室。品質と導入メリットを表現"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

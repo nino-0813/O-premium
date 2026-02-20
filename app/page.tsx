@@ -16,6 +16,7 @@ import TestimonialsSection from "@/components/dental-towel/TestimonialsSection";
 import BenefitsSection from "@/components/dental-towel/BenefitsSection";
 import FAQ from "@/components/dental-towel/FAQ";
 import CTA from "@/components/dental-towel/CTA";
+import AnimateIn from "@/components/AnimateIn";
 
 const LP_TITLE = "歯科専用フェイスタオル｜O premium｜歯科医院向け高級タオル";
 const LP_DESCRIPTION =
@@ -86,17 +87,35 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <JsonLd data={productSchema} />
       <JsonLd data={faqSchema} />
-      <LpHeader />
+      <AnimateIn delay={0} threshold={0}>
+        <LpHeader />
+      </AnimateIn>
       <main id="main" className="flex-1">
-        <Hero />
-        <FeaturesSection />
-        <ComparisonTable />
-        <TestimonialsSection />
-        <BenefitsSection />
-        <CTA />
-        <FAQ items={FAQ_DATA} />
+        <AnimateIn delay={120}>
+          <Hero />
+        </AnimateIn>
+        <AnimateIn>
+          <FeaturesSection />
+        </AnimateIn>
+        <AnimateIn>
+          <ComparisonTable />
+        </AnimateIn>
+        <AnimateIn>
+          <TestimonialsSection />
+        </AnimateIn>
+        <AnimateIn>
+          <BenefitsSection />
+        </AnimateIn>
+        <AnimateIn>
+          <CTA />
+        </AnimateIn>
+        <AnimateIn>
+          <FAQ items={FAQ_DATA} />
+        </AnimateIn>
       </main>
-      <LpFooter />
+      <AnimateIn>
+        <LpFooter />
+      </AnimateIn>
     </div>
   );
 }

@@ -49,24 +49,15 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {testimonials.map((t, i) => (
             <article
               key={i}
               className="group rounded-xl sm:rounded-2xl bg-card border border-border/80 p-3 sm:p-5 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(74,103,65,0.08)] hover:border-primary/20 transition-all duration-300 min-w-0"
             >
-              {/* 引用マーク */}
-              <span className="font-serif-elegant text-2xl sm:text-3xl md:text-5xl text-primary/20 leading-none block mb-1 sm:mb-2 select-none" aria-hidden>
-                “
-              </span>
 
-              {/* コメント本文 */}
-              <blockquote className="text-[10px] sm:text-[12px] md:text-[15px] text-foreground/90 leading-[1.7] sm:leading-[1.8] md:leading-[1.85] mb-3 sm:mb-4 md:mb-8">
-                {t.quote}
-              </blockquote>
-
-              {/* プロフィール */}
-              <footer className="flex items-center gap-2 sm:gap-3 md:gap-4">
+              {/* プロフィール（上） */}
+              <footer className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 group-hover:border-primary/30 transition-colors">
                   <span className="text-primary font-serif-elegant text-xs sm:text-sm md:text-lg font-medium">{t.initial}</span>
                 </div>
@@ -79,6 +70,16 @@ export default function TestimonialsSection() {
                   </p>
                 </div>
               </footer>
+
+              {/* 引用マーク */}
+              <span className="font-serif-elegant text-2xl sm:text-3xl md:text-5xl text-primary/20 leading-none block mb-1 sm:mb-2 select-none" aria-hidden>
+                “
+              </span>
+
+              {/* コメント本文 */}
+              <blockquote className="text-[10px] sm:text-[12px] md:text-[15px] text-foreground/90 leading-[1.7] sm:leading-[1.8] md:leading-[1.85]">
+                {t.quote}
+              </blockquote>
             </article>
           ))}
         </div>

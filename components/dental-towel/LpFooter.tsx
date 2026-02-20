@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LpFooter() {
   return (
@@ -6,8 +7,14 @@ export default function LpFooter() {
       <div className="mx-auto max-w-[1120px]">
         <div className="flex flex-col items-center gap-6">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="font-serif-elegant text-lg text-primary border border-accent-light rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200">
-              O
+            <span className="relative w-9 h-9 shrink-0 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+              <Image
+                src="/images/logo-o.png"
+                alt="O premium"
+                width={36}
+                height={36}
+                className="object-contain"
+              />
             </span>
             <span className="text-[10px] tracking-[0.28em] text-muted-foreground uppercase">O premium</span>
           </Link>

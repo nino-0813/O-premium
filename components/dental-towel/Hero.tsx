@@ -28,10 +28,15 @@ export default function Hero() {
               <br />
               高級フェイスタオル
             </h1>
-            <p className="text-[15px] sm:text-base text-muted-foreground leading-relaxed mb-8 max-w-lg">
-              現場の歯科医師・衛生士が素材から設計した、歯科専用プレミアムフェイスタオル。
+            <p className="text-[15px] sm:text-base text-muted-foreground leading-[1.85] sm:leading-relaxed mb-8 max-w-lg">
+              現場の歯科医師・衛生士が素材から設計した、
+              <br className="sm:hidden" />
+              歯科専用プレミアムフェイスタオル。
+              <br className="sm:hidden" />
               <strong className="text-foreground font-medium">吸水性・耐久性・肌触り</strong>
-              のすべてにこだわり、患者満足度と医院のブランド力を高めます。
+              のすべてにこだわり、
+              <br className="sm:hidden" />
+              患者満足度と医院のブランド力を高めます。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -69,15 +74,24 @@ export default function Hero() {
 
           {/* Hero Image */}
           <div className="order-1 lg:order-2">
-            <div className="relative aspect-[4/5] max-w-lg mx-auto rounded-2xl overflow-hidden shadow-soft border border-border">
-              <Image
-                src="/images/hero-towel-stack.png"
-                alt="O premium 歯科専用プレミアムフェイスタオル"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            {/* スマホ: 余白・背景でフレーム感を出す / PC: そのまま */}
+            <div className="lg:max-w-lg mx-auto px-2 sm:px-0">
+              <div className="relative aspect-[4/5] w-full max-w-[340px] sm:max-w-none mx-auto rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] lg:shadow-soft border border-border bg-secondary/30 lg:bg-transparent">
+                <Image
+                  src="/images/hero-towel-stack.png"
+                  alt="O premium 歯科専用プレミアムフェイスタオル"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  sizes="(max-width: 640px) 340px, (max-width: 1024px) 100vw, 50vw"
+                />
+                {/* スマホのみ: 下方向のグラデーションでコンテンツへ自然につなぐ */}
+                <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 bg-gradient-to-t from-card/90 via-card/40 to-transparent pointer-events-none lg:hidden" aria-hidden />
+                {/* スマホのみ: 控えめなキャプション */}
+                <p className="absolute bottom-3 left-4 right-4 text-center text-[11px] tracking-[0.2em] text-foreground/70 font-medium uppercase lg:hidden">
+                  O premium
+                </p>
+              </div>
             </div>
           </div>
         </div>

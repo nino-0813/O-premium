@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useCallback } from "react";
 
 const NAV_ITEMS = [
@@ -22,8 +23,14 @@ export default function LpHeader() {
           href="/"
           className="flex items-center gap-3 group"
         >
-          <span className="text-xl font-serif-elegant font-light text-primary border border-accent-light rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200">
-            O
+          <span className="relative w-9 h-9 shrink-0 rounded-full overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+            <Image
+              src="/images/logo-o.png"
+              alt="O premium"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
           </span>
           <span className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
             O premium
