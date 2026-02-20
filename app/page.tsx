@@ -12,6 +12,7 @@ import LpFooter from "@/components/dental-towel/LpFooter";
 import Hero from "@/components/dental-towel/Hero";
 import FeaturesSection from "@/components/dental-towel/FeaturesSection";
 import ComparisonTable from "@/components/dental-towel/ComparisonTable";
+import ProductGallerySection from "@/components/dental-towel/ProductGallerySection";
 import TestimonialsSection from "@/components/dental-towel/TestimonialsSection";
 import BenefitsSection from "@/components/dental-towel/BenefitsSection";
 import FAQ from "@/components/dental-towel/FAQ";
@@ -99,6 +100,9 @@ export default function Home() {
         </AnimateIn>
         <AnimateIn>
           <ComparisonTable />
+        </AnimateIn>
+        <AnimateIn>
+          <ProductGallerySection />
         </AnimateIn>
         <AnimateIn>
           <TestimonialsSection />

@@ -53,19 +53,19 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <article
               key={i}
-              className="group rounded-xl sm:rounded-2xl bg-card border border-border/80 p-3 sm:p-5 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(74,103,65,0.08)] hover:border-primary/20 transition-all duration-300 min-w-0"
+              className="group rounded-xl sm:rounded-2xl bg-card border border-border/80 p-4 sm:p-5 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(74,103,65,0.08)] hover:border-primary/20 transition-all duration-300 min-w-0"
             >
 
               {/* プロフィール（上） */}
-              <footer className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 group-hover:border-primary/30 transition-colors">
-                  <span className="text-primary font-serif-elegant text-xs sm:text-sm md:text-lg font-medium">{t.initial}</span>
+              <footer className="flex items-center gap-3 sm:gap-3 md:gap-4 mb-4 sm:mb-4 md:mb-6">
+                <div className="w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 group-hover:border-primary/30 transition-colors">
+                  <span className="text-primary font-serif-elegant text-sm sm:text-sm md:text-lg font-medium">{t.initial}</span>
                 </div>
                 <div className="min-w-0">
-                  <p className="font-medium text-foreground text-[10px] sm:text-[12px] md:text-[15px]">
+                  <p className="font-medium text-foreground text-[14px] sm:text-[12px] md:text-[15px]">
                     {t.role}
                   </p>
-                  <p className="text-[9px] sm:text-[11px] md:text-[13px] text-muted-foreground mt-0.5">
+                  <p className="text-[13px] sm:text-[11px] md:text-[13px] text-muted-foreground mt-0.5">
                     {t.clinic}
                   </p>
                 </div>
@@ -76,8 +76,8 @@ export default function TestimonialsSection() {
                 “
               </span>
 
-              {/* コメント本文 */}
-              <blockquote className="text-[10px] sm:text-[12px] md:text-[15px] text-foreground/90 leading-[1.7] sm:leading-[1.8] md:leading-[1.85]">
+              {/* コメント本文 — 比較セクションのカードと同サイズ */}
+              <blockquote className="text-[12px] sm:text-[14px] md:text-[15px] text-foreground/90 leading-relaxed sm:leading-[1.8] md:leading-[1.85]">
                 {t.quote}
               </blockquote>
             </article>
