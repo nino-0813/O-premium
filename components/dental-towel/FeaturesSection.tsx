@@ -62,9 +62,9 @@ export default function FeaturesSection() {
           {features.map((feature, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-border bg-card p-8 shadow-card hover:shadow-soft hover:border-primary/20 transition-all duration-300"
+              className="rounded-2xl border border-border bg-card p-8 shadow-card hover:shadow-soft hover:border-accent-light transition-all duration-300"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent-light text-primary mb-6">
                 {feature.icon}
               </div>
               <h3 className="font-serif-elegant text-lg font-medium text-foreground mb-3">

@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
             >
               {/* Avatar + role */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center shrink-0">
                   <span className="text-primary font-serif-elegant text-lg">{t.initial}</span>
                 </div>
                 <div>
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-[14px] text-foreground leading-[1.8] border-l-2 border-primary/30 pl-5">
+              <blockquote className="text-[14px] text-foreground leading-[1.8] border-l-2 border-accent-light pl-5">
                 {t.quote}
               </blockquote>
             </div>

@@ -21,13 +21,13 @@ export default function CTA() {
       />
 
       <div className="relative z-10 mx-auto max-w-[1120px] px-5 sm:px-8 text-center">
-        <span className="text-[11px] tracking-[0.2em] text-primary-foreground/70 uppercase">
+        <span className="text-[11px] tracking-[0.2em] text-white/70 uppercase">
           Sample Request
         </span>
-        <h2 id="cta-heading" className="font-serif-elegant text-xl sm:text-2xl md:text-[2rem] font-medium text-primary-foreground mt-2 mb-4 text-balance">
+        <h2 id="cta-heading" className="font-serif-elegant text-xl sm:text-2xl md:text-[2rem] font-medium text-white mt-2 mb-4 text-balance">
           まずは手に取って、品質を実感してください
         </h2>
-        <p className="text-primary-foreground/85 text-[14px] sm:text-[15px] max-w-lg mx-auto leading-relaxed mb-10 sm:mb-12">
+        <p className="text-white/85 text-[14px] sm:text-[15px] max-w-lg mx-auto leading-relaxed mb-10 sm:mb-12">
           無料サンプルをお送りいたします。実際の肌触り・吸水性をお試しいただき、導入をご検討ください。
         </p>
 
@@ -40,13 +40,13 @@ export default function CTA() {
           </Link>
           <Link
             href="/quote-request"
-            className="inline-flex items-center justify-center w-full sm:w-auto min-w-0 sm:min-w-[200px] min-h-[52px] border-2 border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10 py-4 px-6 sm:py-5 sm:px-8 rounded-full font-medium text-[15px] transition-all duration-200 active:scale-[0.98]"
+            className="inline-flex items-center justify-center w-full sm:w-auto min-w-0 sm:min-w-[200px] min-h-[52px] border-2 border-white/60 text-white hover:bg-white/10 py-4 px-6 sm:py-5 sm:px-8 rounded-full font-medium text-[15px] transition-all duration-200 active:scale-[0.98]"
           >
             見積依頼はこちら
           </Link>
         </div>
 
-        <p className="mt-10 text-[13px] text-primary-foreground/70">
+        <p className="mt-10 text-[13px] text-white/70">
           通常、2〜3営業日以内にご連絡いたします。
         </p>
       </div>

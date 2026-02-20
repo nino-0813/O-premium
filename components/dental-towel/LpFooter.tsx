@@ -6,7 +6,7 @@ export default function LpFooter() {
       <div className="mx-auto max-w-[1120px]">
         <div className="flex flex-col items-center gap-6">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="font-serif-elegant text-lg text-primary border border-primary/30 rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-200">
+            <span className="font-serif-elegant text-lg text-primary border border-accent-light rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200">
               O
             </span>
             <span className="text-[10px] tracking-[0.28em] text-muted-foreground uppercase">O premium</span>

@@ -16,13 +16,13 @@ export default function LpHeader() {
   const close = useCallback(() => setOpen(false), []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-card/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-md">
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-3 group"
         >
-          <span className="text-xl font-serif-elegant font-light text-primary border border-primary/30 rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-200">
+          <span className="text-xl font-serif-elegant font-light text-primary border border-accent-light rounded-full w-9 h-9 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200">
             O
           </span>
           <span className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
@@ -71,7 +71,7 @@ export default function LpHeader() {
           <button
             type="button"
             onClick={close}
-            className="absolute inset-0 bg-foreground/30 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/30 backdrop-blur-sm"
             aria-label="メニューを閉じる"
           />
           <nav className="relative bg-card border-b border-border shadow-lg py-2 px-5">
@@ -81,7 +81,7 @@ export default function LpHeader() {
                   <a
                     href={href}
                     onClick={close}
-                    className="flex items-center min-h-[48px] py-3 text-[15px] text-foreground hover:text-primary font-medium border-b border-border/30 last:border-0 transition-colors"
+                    className="flex items-center min-h-[48px] py-3 text-[15px] text-foreground hover:text-primary font-medium border-b border-muted last:border-0 transition-colors"
                   >
                     {label}
                   </a>

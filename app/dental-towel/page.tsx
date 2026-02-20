@@ -82,23 +82,21 @@ export default function DentalTowelPage() {
   const faqSchema = buildFAQSchema(FAQ_DATA, pageUrl);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <JsonLd data={organizationSchema} />
       <JsonLd data={productSchema} />
       <JsonLd data={faqSchema} />
-      <div className="min-h-screen flex flex-col">
-        <LpHeader />
-        <main id="main" className="flex-1">
-          <Hero />
-          <FeaturesSection />
-          <ComparisonTable />
-          <TestimonialsSection />
-          <BenefitsSection />
-          <CTA />
-          <FAQ items={FAQ_DATA} />
-        </main>
-        <LpFooter />
-      </div>
-    </>
+      <LpHeader />
+      <main id="main" className="flex-1">
+        <Hero />
+        <FeaturesSection />
+        <ComparisonTable />
+        <TestimonialsSection />
+        <BenefitsSection />
+        <CTA />
+        <FAQ items={FAQ_DATA} />
+      </main>
+      <LpFooter />
+    </div>
   );
 }

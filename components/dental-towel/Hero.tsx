@@ -56,7 +56,7 @@ export default function Hero() {
                 "使い捨てと比較してコスト削減効果が大きい",
               ].map((text, i) => (
                 <li key={i} className="flex items-center gap-3 text-[14px] text-muted-foreground">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-light text-primary text-xs font-semibold">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
                       <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -69,7 +69,7 @@ export default function Hero() {
 
           {/* Hero Image */}
           <div className="order-1 lg:order-2">
-            <div className="relative aspect-[4/5] max-w-lg mx-auto rounded-2xl overflow-hidden shadow-soft border border-border/50">
+            <div className="relative aspect-[4/5] max-w-lg mx-auto rounded-2xl overflow-hidden shadow-soft border border-border">
               <Image
                 src="/images/hero-towel.jpg"
                 alt="O premium 歯科専用プレミアムフェイスタオル"

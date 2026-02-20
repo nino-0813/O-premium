@@ -58,7 +58,7 @@ export default function BenefitsSection() {
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft border border-border/50">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft border border-border">
             <Image
               src="/images/dental-clinic.jpg"
               alt="清潔感のある歯科医院の診療室"
@@ -83,7 +83,7 @@ export default function BenefitsSection() {
             <div className="grid sm:grid-cols-2 gap-6">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-light text-primary">
                     {benefit.icon}
                   </div>
                   <div>

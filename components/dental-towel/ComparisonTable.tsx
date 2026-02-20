@@ -69,14 +69,14 @@ export default function ComparisonTable() {
               {rows.map((row, i) => (
                 <tr
                   key={i}
-                  className="border-b border-border/50 last:border-0 transition-colors hover:bg-secondary/50"
+                  className="border-b border-border last:border-0 transition-colors hover:bg-secondary"
                 >
                   <td className="py-5 px-6 text-[13px] font-medium text-foreground whitespace-nowrap">
                     {row.item}
                   </td>
                   <td className="py-5 px-6 text-[14px] text-foreground leading-relaxed">
                     <span className="flex items-start gap-2">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-light text-primary">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
                           <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
@@ -101,7 +101,7 @@ export default function ComparisonTable() {
                 {row.item}
               </p>
               <div className="space-y-3">
-                <div className="rounded-lg bg-primary/5 border border-primary/10 p-3">
+                <div className="rounded-lg bg-accent-light border border-accent-light p-3">
                   <p className="text-[11px] font-medium text-primary mb-1">O premium</p>
                   <p className="text-[14px] text-foreground leading-relaxed">{row.ours}</p>
                 </div>

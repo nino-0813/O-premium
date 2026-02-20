@@ -26,7 +26,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-transform duration-200 ${
-            open ? "rotate-180 bg-primary/10 text-primary border-primary/20" : ""
+            open ? "rotate-180 bg-accent-light text-primary border-accent-light" : ""
           }`}
           aria-hidden
         >
